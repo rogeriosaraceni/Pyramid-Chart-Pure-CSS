@@ -1,0 +1,143 @@
+.wrapper-pyramid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+    
+.wrapper-pyramid article{
+   flex: 0 1 auto;
+}
+
+.pyramid { 
+    position: relative;
+    margin: 10px;
+}
+
+.row-pyramid{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.row-pyramid .item {
+    position: relative;
+    width: 112px;
+    height: 56px;
+    margin: 1px;
+    text-align: center;
+}
+.row-pyramid .item.item-base {
+    width: 100%;
+    height: 30px;
+}
+.row-pyramid .item a{
+    font-size: 12px;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.row-pyramid .item.item-top a  { top: 60%;}
+.row-pyramid .item.item-left a { left: 60%;}
+.row-pyramid .item.item-right a{ left: 40%;}
+
+.row-pyramid .item a:hover{ text-decoration: underline;}
+
+.row-pyramid .item.item-top::before,
+.row-pyramid .item.item-top::after,
+.row-pyramid .item.item-left::before,
+.row-pyramid .item.item-right::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    border: 28px solid;
+}
+
+/* top */
+.row-pyramid .item.item-top::before{
+    left: 0;
+    border-color: #fff #FF6347 #FF6347 #fff;
+}
+.row-pyramid .item.item-top::after{
+    right: 0;
+    border-color: #fff #fff #FF6347 #FF6347;
+}
+
+/* left e right */
+.row-pyramid .item.item-left::before{
+    left: 0;
+    border-color: #fff #FF6347 #FF6347 #fff;
+}
+.row-pyramid .item.item-right::before{
+    right: 0;
+    border-color: #fff #fff #FF6347 #FF6347;
+}
+
+
+
+/* colors top */
+.row-pyramid .item.item-top.it-green::before{ border-color: #fff #1ab394 #1ab394 #fff;}
+.row-pyramid .item.item-top.it-green::after { border-color: #fff #fff #1ab394 #1ab394;}
+
+.row-pyramid .item.item-top.it-red::before{ border-color: #fff #F1634B #F1634B #fff;}
+.row-pyramid .item.item-top.it-red::after { border-color: #fff #fff #F1634B #F1634B;}
+
+.row-pyramid .item.item-top.it-orange::before{ border-color: #fff #f8ac59 #f8ac59 #fff;}
+.row-pyramid .item.item-top.it-orange::after { border-color: #fff #fff #f8ac59 #f8ac59;}
+
+.row-pyramid .item.item-top.it-grey::before{ border-color: #fff #bbb #bbb #fff;}
+.row-pyramid .item.item-top.it-grey::after { border-color: #fff #fff #bbb #bbb;}
+
+.row-pyramid .item.item-top.it-black::before{ border-color: #fff #222 #222 #fff;}
+.row-pyramid .item.item-top.it-black::after { border-color: #fff #fff #222 #222;}
+
+
+
+/* colors blocks */
+.row-pyramid .item.it-green,
+.row-pyramid .item.item-left.it-green,
+.row-pyramid .item.item-right.it-green{ background-color: #1ab394;}
+.row-pyramid .item.item-left.it-green::before { border-color: #fff #1ab394 #1ab394 #fff;}
+.row-pyramid .item.item-right.it-green::before{ border-color: #fff #fff #1ab394 #1ab394;}
+
+.row-pyramid .item.it-red,
+.row-pyramid .item.item-left.it-red,
+.row-pyramid .item.item-right.it-red{ background-color: #F1634B;}
+.row-pyramid .item.item-left.it-red::before { border-color: #fff #F1634B #F1634B #fff;}
+.row-pyramid .item.item-right.it-red::before{ border-color: #fff #fff #F1634B #F1634B;}
+
+.row-pyramid .item.it-orange,
+.row-pyramid .item.item-left.it-orange,
+.row-pyramid .item.item-right.it-orange{ background-color: #f8ac59;}
+.row-pyramid .item.item-left.it-orange::before { border-color: #fff #f8ac59 #f8ac59 #fff;}
+.row-pyramid .item.item-right.it-orange::before{ border-color: #fff #fff #f8ac59 #f8ac59;}
+
+.row-pyramid .item.it-grey,
+.row-pyramid .item.item-left.it-grey,
+.row-pyramid .item.item-right.it-grey{ background-color: #bbb;}
+.row-pyramid .item.item-left.it-grey::before { border-color: #fff #bbb #bbb #fff;}
+.row-pyramid .item.item-right.it-grey::before{ border-color: #fff #fff #bbb #bbb;}
+
+.row-pyramid .item.it-black,
+.row-pyramid .item.item-left.it-black,
+.row-pyramid .item.item-right.it-black{ background-color: #222;}
+.row-pyramid .item.item-left.it-black::before { border-color: #fff #222 #222 #fff;}
+.row-pyramid .item.item-right.it-black::before{ border-color: #fff #fff #222 #222;}
+
+
+@media (max-width: 768px) {
+    .row-pyramid .item {  width: 80px; height: 40px;}
+
+    .row-pyramid .item.item-top::before,
+    .row-pyramid .item.item-top::after,
+    .row-pyramid .item.item-left::before,
+    .row-pyramid .item.item-right::before{ border: 20px solid;}
+
+    .row-pyramid .item a{ font-size: 10px;}
+}
