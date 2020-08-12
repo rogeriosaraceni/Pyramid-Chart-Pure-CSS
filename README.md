@@ -1,1 +1,1 @@
-# Pyramid-Chart-Pure-CSS
+# Pyramid Chart Pure CSS
